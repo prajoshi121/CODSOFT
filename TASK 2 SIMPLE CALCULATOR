@@ -1,0 +1,45 @@
+def add(x,y):
+    return x+y
+
+def sub(x,y):
+    return x-y
+
+def multiplication(x,y):
+    return x*y
+
+def division(x,y):
+    if y==0:
+        print("The given calculation cannot be performed")
+    else:
+        return x/y
+    
+while True:
+    print("Simple Calculator")
+    print("Options")
+    print("1.Addition")
+    print("2.Subtraction")
+    print("3.Multiplication")
+    print("4.Division")
+    print("5.exit")
+
+    choice=int(input("Enter your choice: "))
+    if choice==5:
+        break
+    x=float(input("Enter the first number: "))
+    y=float(input("Enter the second number: "))
+
+    if choice==1:
+        res=add(x,y)
+    elif choice==2:
+        res=sub(x,y)
+    elif choice==3:
+        res=multiplication(x,y)
+    elif choice==4:
+        res=division(x,y)
+
+    else:
+        print("Invalid choice,please try again")
+
+    print(f"RESULT:{res}")
+
+    
